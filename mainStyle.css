@@ -1,11 +1,14 @@
-body{margin:0px}
-main{margin:20px}
+html, body{
+    height: 100%;
+    margin:0;
+}
+
 h1{
     background-color: rgb(163, 163, 163);
     margin-bottom:0;
     margin-top:0;
     text-align: center;
-    height:100px;
+    height:200px;
 }
 
 .navbar ul{
@@ -29,16 +32,38 @@ h1{
     display:inline-block;
 }
 
-#mainBody{
-    background-color: rgb(216,216,216);
-    width:100px;
-    height:100px;
-    margin-top: 0;
-}
-
+/*
+- "display:flex" and "flex-direction: column" allows this div's children to stack on each other vertically
+- "column" is used since navbar and header are part of its children
+- if "row" is used instead, then "contentRow" will be separate from this div and be next to each other
+*/
 #backgroundBody{
     background-color: rgb(216,216,216);
-    width:750px;
-    height:100vh;
+    width:900px;
+    min-height:100vh;
     margin:auto;
+    display:flex;
+    flex-direction: column;
+}
+
+/*
+- "display:flex" allows this div's children to stack on each other horizontally
+- "flex:1" allows this div to fill the remaining space to the bottom
+*/
+#contentRow{
+    display:flex;
+    flex:1;
+}
+
+#mainBodyOne{
+    background-color: rgb(143, 139, 139);
+    width:250px;
+}
+
+/*
+- "flex:1" allows this div to fill the remaining space to the right
+*/
+#mainBodyTwo{
+    background-color: rgb(230,230,230);
+    flex: 1;
 }
