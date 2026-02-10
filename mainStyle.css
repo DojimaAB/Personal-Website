@@ -69,3 +69,7 @@ h1{
     flex: 1;
     text-align: center;
 }
+
+#infoBox{
+    margin:10px;
+}
