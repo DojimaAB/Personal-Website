@@ -1,4 +1,1 @@
- Initial Design Concept:
-
- 
-<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/8d6bd2d3-252a-4581-bedd-4f8048dcece0" />
+I am planning to have this layout for my 'Home' and 'About Me' page: https://www.figma.com/design/8FQIy80ZQwm79ko8MiBnsi/Untitled?node-id=0-1&t=uFHq82J3JdvDKY3E-1 
