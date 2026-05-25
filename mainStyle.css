@@ -1,13 +1,25 @@
+@import url('https://googleapis.com');
+
 html, body{
     height: 100%;
     margin:0;
     align-content: center;
-    background-image: url(Pictures/banner.png);
+    background-color:black;
+    font-family: 'Kode Mono', monospace;
+    color: white;
+}
+
+footer{
+    text-align: center;
+    align-content: center;
+    height: 50px;
+    background-color: #1A1A1A;
+    color: white;
 }
 
 .navbar ul{
     list-style-type: none;
-    background-color: rgb(56,56,56);
+    background-color: #1A1A1A;
     padding:0px;
     margin-top: 0;
     margin-bottom:0;
@@ -21,7 +33,7 @@ html, body{
     display:block;
 }
 .navbar a:hover{
-    background-color: rgb(26,26,26);
+    color:#4A4A4A;
 }
 .navbar li{
     display:inline-block;
@@ -33,7 +45,7 @@ html, body{
 - if "row" is used instead, then "contentRow" will be separate from this div and be next to each other
 */
 #backgroundBody{
-    background-color: rgb(216,216,216);
+    background-color: rgba(221, 221, 221, 0.5);
     width:900px;
     min-height:100vh;
     margin:auto;
@@ -48,29 +60,47 @@ html, body{
 #contentRow{
     display:flex;
     flex:1;
-}
-
-#mainBodyOne{
-    background-color: rgb(143, 139, 139);
-    width:250px;
-    text-align: center;
-}
-
-#profilePic{
-    background-size: 100% 100%;
-    border-radius: 100%;
+    align-items: center;
+    margin: 30px;
 }
 
 /*
 - "flex:1" allows this div to fill the remaining space to the right
 */
-#mainBodyTwo{
-    background-color: rgb(230,230,230);
-    flex: 1;
-    text-align: center;
-    padding:10px;
+#mainBodyOne{
+    margin: 20px;
 }
 
 #infoBox{
-    margin:10px;
+    font-size:18px;
+}
+
+#nameTitle p{
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+#nameTitleRow{
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    line-height: 1;
+    height: 48px;
+    width: fit-content;
+}
+
+#smallBox{
+    background-color: white;
+    width: 10px;
+    height: 52px;
+    margin-right: 5px;
+}
+
+#name{
+    background-color: #4A4A4A;
+    color:white;
+    font-size: 45px;
+    padding: 4px 14px;
+    letter-spacing: 2px;
+    line-height: 1;
 }
