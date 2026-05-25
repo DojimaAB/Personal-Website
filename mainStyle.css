@@ -1,106 +1,259 @@
-@import url('https://googleapis.com');
 
-html, body{
-    height: 100%;
-    margin:0;
-    align-content: center;
-    background-color:black;
-    font-family: 'Kode Mono', monospace;
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {box-sizing: border-box;}
+
+html, body {
+    min-height: 100%;
+    margin: 0;
+    background-color: black;
+    font-family: 'Share Tech Mono', monospace;
     color: white;
 }
 
-footer{
-    text-align: center;
-    align-content: center;
-    height: 50px;
-    background-color: #1A1A1A;
-    color: white;
+body {padding: 0;}
+
+#backgroundBody {
+    background-color: rgba(221, 221, 221, 0.5);
+    width: min(calc(100% - 2rem), 900px);
+    max-width: 900px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-.navbar ul{
-    list-style-type: none;
-    background-color: #1A1A1A;
-    padding:0px;
-    margin-top: 0;
-    margin-bottom:0;
-    text-align: center;
+/*NAVBAR SECTION*/
+#brand {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: white;
+    padding: 0 0 0 32px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    height: 48px;
+    background: none;
+    text-decoration: none;
     font-weight: bold;
 }
-.navbar a{
-    color:white;
-    text-decoration: none;
-    padding: 15px;
-    display:block;
-}
-.navbar a:hover{
-    color:#4A4A4A;
-}
-.navbar li{
-    display:inline-block;
-}
 
-/*
-- "display:flex" and "flex-direction: column" allows this div's children to stack on each other vertically
-- "column" is used since navbar and header are part of its children
-- if "row" is used instead, then "contentRow" will be separate from this div and be next to each other
-*/
-#backgroundBody{
-    background-color: rgba(221, 221, 221, 0.5);
-    width:900px;
-    min-height:100vh;
-    margin:auto;
-    display:flex;
-    flex-direction: column;
-}
-
-/*
-- "display:flex" allows this div's children to stack on each other horizontally
-- "flex:1" allows this div to fill the remaining space to the bottom
-*/
-#contentRow{
-    display:flex;
-    flex:1;
+.containerTop {
+    display: flex;
     align-items: center;
-    margin: 30px;
+    justify-content: space-between;
+    background: #1A1A1A;
+    width: 100%;
+    min-height: 48px;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
 }
 
-/*
-- "flex:1" allows this div to fill the remaining space to the right
-*/
-#mainBodyOne{
-    margin: 20px;
+.navbar ul {
+    list-style-type: none;
+    background: none;
+    padding: 0 32px 0 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2.5rem;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-#infoBox{
-    font-size:18px;
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    display: block;
+    font-size: 1rem;
+    letter-spacing: 1px;
 }
 
-#nameTitle p{
+.navbar a:hover {color: #4A4A4A;}
+
+.navbar li {display: inline-block;}
+
+/*MAIN CONTENT SECTION*/
+#contentRow {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0 30px 30px;
+    padding-top: 0;
+}
+
+#contentRow img {
+    width: min(100%, 350px);
+    max-width: 350px;
+    height: 425px;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+}
+
+#mainBodyOne {
+    margin: 0;
+    flex: 1;
+}
+
+#infoBox {font-size: 18px;}
+
+#nameTitle p {
     margin: 10px 0;
     font-size: 20px;
 }
 
-#nameTitleRow{
+#nameTitleRow {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     letter-spacing: 2px;
     line-height: 1;
-    height: 48px;
     width: fit-content;
+    flex-wrap: wrap;
 }
 
-#smallBox{
+#smallBox {
     background-color: white;
     width: 10px;
-    height: 52px;
     margin-right: 5px;
+    flex-shrink: 0;
 }
 
-#name{
+#name {
     background-color: #4A4A4A;
-    color:white;
+    color: white;
     font-size: 45px;
-    padding: 4px 14px;
+    padding: 0 24px;
     letter-spacing: 2px;
     line-height: 1;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+#links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#icon {
+    color: white;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+/*FOOTER SECTION*/
+
+footer {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 0.75rem 1rem;
+    background-color: #1A1A1A;
+    color: white;
+}
+
+/*SITE UPDATES SECTION*/
+#siteUpdates {
+    text-align: center;
+    background-color: #444444;
+    height: 175px;
+}
+
+/*MEDIA QUERIES SECTION*/
+/*Tablets*/
+@media (max-width: 900px) {
+    .containerTop {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.75rem 0;
+        gap: 0.75rem;
+    }
+
+    #brand {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .navbar ul {
+        padding: 0;
+        gap: 1.25rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #contentRow {
+        margin: 1.25rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #contentRow img {max-width: 280px;}
+
+    #mainBodyOne {width: 100%;}
+
+    #nameTitleRow {
+        justify-content: center;
+        width: 100%;
+    }
+
+    #links {justify-content: center;}
+}
+
+/*Phones*/
+@media (max-width: 640px) {
+    body {padding: 0;}
+
+    #backgroundBody {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+    }
+
+    .containerTop {
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    #brand {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .navbar li {
+        width: 100%;
+    }
+
+    .navbar a {
+        padding: 0.5rem 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    #contentRow {
+        margin: 1.25rem;
+        gap: 1rem;
+    }
+
+    #contentRow img {max-width: 100%;}
+
+    #name {font-size: 1.8rem;}
+
+    #nameTitle p {font-size: 1rem;}
+
+    #infoBox {font-size: 1rem;}
 }
