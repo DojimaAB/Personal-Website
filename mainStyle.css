@@ -11,15 +11,14 @@ html, body {
     background-repeat: no-repeat;
     font-family: 'Share Tech Mono', monospace;
     color: white;
-    filter: blur(0.6px);
 }
 
 body {padding: 0;}
 
 #backgroundBody {
     background-color: rgba(221, 221, 221, 0.25);
-    width: min(calc(100% - 2rem), 900px);
-    max-width: 900px;
+    width: min(calc(100% - 2rem), 1000px);
+    max-width: 1000px;
     min-height: 100vh;
     margin: 0 auto;
     display: flex;
@@ -83,18 +82,22 @@ body {padding: 0;}
 
 .navbar li {display: inline-block;}
 
-/*MAIN CONTENT SECTION*/
-#contentRow {
+/*PROFILE SECTION*/
+#profileTitle{
+    font-size: 50px;
+    margin: 1rem 0;
+    padding: 0 2rem;
+}
+
+#profileContentRow {
     display: flex;
     flex: 1;
     align-items: center;
-    justify-content: center;
     gap: 1.5rem;
-    margin: 0 30px 30px;
-    padding-top: 0;
+    margin: 0 30px 17px;
 }
 
-#contentRow img {
+#profileContentRow img {
     width: min(100%, 350px);
     max-width: 350px;
     height: 425px;
@@ -103,47 +106,17 @@ body {padding: 0;}
     display: block;
 }
 
-#mainBodyOne {
-    margin: 0;
-    flex: 1;
-}
+#mainBodyOne {padding: 0;}
 
-#infoBox {font-size: 18px;}
+#mainBodyOne h3 span{font-weight:normal;}
 
-#nameTitle p {
-    margin: 10px 0;
-    font-size: 20px;
-}
+#infoBox {font-size: 15px;}
 
-#name {
-    background-color: rgb(236, 19, 19);
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.521);
-    background-image: url('Pictures/staticeffect.png');
-    background-size: 100% 100%;
-    filter: blur(0.5px);
-    color: black;
-    font-size: 45px;
-    padding: 0 10px;
-    margin: 0;
-    text-align: left;
-}
+#profileSection hr {width: min(95%, 950px);}
 
-#links{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
+#skills, #favorites{margin: 1.5rem 1.5rem;}
 
-#icon {
-    color: white;
-    font-size: 2.5rem;
-    text-decoration: none;
-}
-
-#icon:hover {
-    transform: scale(1.2);
-    transition: transform 0.25s ease;
-}
+#skills h3,p, #favorites h3,p{margin: 10px 0;}
 
 /*FOOTER SECTION*/
 
@@ -156,13 +129,6 @@ footer {
     padding: 0.75rem 1rem;
     background-color: #111111;
     color: white;
-}
-
-/*SITE UPDATES SECTION*/
-#siteUpdates {
-    text-align: center;
-    background-color: rgba(5, 5, 5, 0.25);
-    height: 175px;
 }
 
 /*MEDIA QUERIES SECTION*/
@@ -189,7 +155,7 @@ footer {
         flex-wrap: wrap;
     }
 
-    #contentRow {
+    #profileContentRow {
         margin: 1.25rem;
         flex-direction: column;
         text-align: center;
@@ -197,7 +163,7 @@ footer {
 
     #name {text-align: center; width: 100%;}
 
-    #contentRow img {max-width: 280px;}
+    #profileContentRow img {max-width: 280px;}
 
     #mainBodyOne {width: 100%;}
 
@@ -241,12 +207,12 @@ footer {
         width: 100%;
     }
 
-    #contentRow {
+    #profileContentRow {
         margin: 1.25rem;
         gap: 1rem;
     }
 
-    #contentRow img {max-width: 100%;}
+    #profileContentRow img {max-width: 100%;}
 
     #name {font-size: 1.8rem; text-align: center;}
 
