@@ -126,11 +126,11 @@ body {padding: 0;}
     background-color:#61D1BF;
 }
 
-#skills, #favorites{margin: 1.5rem 1.5rem;}
+#skills, #interests{margin: 1.5rem 1.5rem;}
 
-#skills h3,p, #favorites h3,p{margin: 10px 0;}
+#skills h3,p, #interests h3,p{margin: 10px 0;}
 
-#skills strong, #favorites strong, #mainBodyOne h3, #infoBox, #profileTitle, #projectBox strong,a{
+#skills strong, #interests strong, #mainBodyOne h3, #infoBox, #profileTitle, #projectBox strong,a{
     color: #CEFAF3;
     text-shadow: 0 0 10px rgba(206, 250, 243, 0.25);
 }
