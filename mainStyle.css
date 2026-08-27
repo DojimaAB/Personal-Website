@@ -163,17 +163,29 @@ body {padding: 0;}
     border: 1px solid #61D1BF;
 }
 
-/*CONTACT SECTION*/
+/*FOOTER SECTION*/
+
+footer {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50px;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #61D1BF;
+    border-bottom: 1px solid #61D1BF;
+    box-shadow: 0 0 10px rgba(97, 209, 191, 0.25);
+}
+
 #contactRow{
-    margin: 1rem;
-    padding: 1rem;
+    padding: 0 1rem;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 #icon{
-    font-size: 3rem;
+    font-size: 2rem;
     color: #61D1BF;
     text-shadow: 0 0 10px rgba(97, 209, 191, 0.25);
 }
@@ -181,22 +193,6 @@ body {padding: 0;}
 #icon:hover{
     color: #CEFAF3;
     text-shadow: 0 0 10px rgba(206, 250, 243, 0.25);
-}
-
-/*FOOTER SECTION*/
-
-footer {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 50px;
-    padding: 0.75rem 1rem;
-    color: #CEFAF3;
-    text-shadow: 0 0 10px rgba(206, 250, 243, 0.25);
-    border-top: 1px solid #61D1BF;
-    border-bottom: 1px solid #61D1BF;
-    box-shadow: 0 0 10px rgba(97, 209, 191, 0.25);
 }
 
 /*MEDIA QUERIES SECTION*/
